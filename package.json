@@ -18,15 +18,18 @@
     "test": "test",
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint --ignore-path .eslintignore \"src/**/*.{ts,tsx}\" --fix --max-warnings=0",
     "lint:fix": "eslint --fix .",
     "format": "prettier . --write",
+    "prettier": "prettier --write src/**/*.{ts,tsx}",
     "preview": "vite preview",
     "prepare": "husky install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
@@ -38,6 +41,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
@@ -55,7 +59,9 @@
     "vite-plugin-eslint": "^1.8.1"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx,html}": "npm run format",
-    "src/**/*.{ts,tsx}": "npm run lint"
+    "src/**/*.{ts,tsx}": [
+      "npm run lint",
+      "npm run prettier"
+    ]
   }
 }

@@ -7,6 +7,7 @@ module.exports = {
   ignorePatterns: ["build", ".eslintrc.cjs"],
   extends: [
     "airbnb",
+    "airbnb-typescript",
     "airbnb/hooks",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -38,20 +39,11 @@ module.exports = {
     },
   },
   rules: {
+    "no-param-reassign": "off",
     "react/function-component-definition": [2, { namedComponents: "arrow-function" }],
     "react/react-in-jsx-scope": 0,
     "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     "react/jsx-filename-extension": [1, { extensions: [".ts", ".tsx"] }],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        js: "never",
-        jsx: "never",
-        ts: "never",
-        tsx: "never",
-      },
-    ],
     "simple-import-sort/imports": [
       "error",
       {
