@@ -10,9 +10,10 @@ const COLORS: TColors = {
   gray2: "#B3B8BB", // logOut button bgColor
   gray3: "#828282", // textColor input placeholder (new tweet)
 
-  blue: "#1E97E1", // welcome
-  blue2: "#1DA1F2", // login
+  blue: "#1DA1F2", // login
+  blue2: "#1E97E1", // unused by me
 
+  lightBlue: "#a2daf7",
   darkBlue: "#14202a", // bgColor dark
 
   black: "#000",
