@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 import COLORS from "./styles/colors";
+import FONTS from "./styles/fonts";
 import SIZES from "./styles/sizes";
 
 const BASE_THEME: DefaultTheme = {
@@ -9,6 +10,9 @@ const BASE_THEME: DefaultTheme = {
   },
   color: {
     ...COLORS,
+  },
+  font: {
+    ...FONTS,
   },
 };
 

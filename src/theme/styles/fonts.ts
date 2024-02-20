@@ -6,8 +6,8 @@ type TFonts = {
 
 const FONTS: TFonts = {
   fontFamily: {
-    roboto: "Roboto",
-    robotoSerif: "Roboto Serif",
+    roboto: "Roboto, sans-serif",
+    robotoSerif: "Roboto Serif, serif",
   },
   fontSize: {
     xl4: "84px",
