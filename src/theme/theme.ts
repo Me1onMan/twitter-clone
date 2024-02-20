@@ -10,6 +10,7 @@ const BASE_THEME: DefaultTheme = {
   },
   color: {
     ...COLORS,
+    bgColorSearch: COLORS.gray4,
   },
   font: {
     ...FONTS,
