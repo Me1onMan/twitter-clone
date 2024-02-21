@@ -16,6 +16,8 @@ export const getBgColor = (variant: TButtonVariants, isDisabled: boolean = false
       return lightBlue;
     case variant === "primary":
       return blue;
+    case variant === "outlined":
+      return white;
     default:
       return gray;
   }

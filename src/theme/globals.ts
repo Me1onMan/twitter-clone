@@ -8,6 +8,14 @@ const GlobalStyle = createGlobalStyle`
 
         font-family: ${({ theme: { font } }) => font.fontFamily.roboto}
     }
+
+    body {
+        background-color: ${({ theme: { color } }) => color.bgColor}
+    }
+
+    a {
+        text-decoration: none;
+    }
 `;
 
 export default GlobalStyle;
