@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import errorImage from "@/assets/Not-found.png";
+import errorImage from "@/assets/images/Not-found.png";
 
 import { Image, MessageContainer, Wrapper } from "./styled";
 import { TProps, TState } from "./types";

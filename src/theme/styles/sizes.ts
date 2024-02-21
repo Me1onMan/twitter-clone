@@ -13,6 +13,8 @@ const SIZES: TSizes = {
   px50: "50px",
   px55: "55px",
   px60: "60px",
+  perc50: "50%",
+  perc80: "80%",
   perc100: "100%",
 };
 
