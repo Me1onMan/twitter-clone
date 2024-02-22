@@ -13,10 +13,6 @@ export const Img = styled.img<TStyledImgProps>`
     $color === "blue" ? color.blue : color.black}; */
 `;
 
-// export const Svg = styled.svg<TStyledImgProps>`
-//   fill: ${({ theme: { color }, $color }) => ($color === "blue" ? color.blue : color.black)};
-// `;
-
 export const StyledH1 = styled.h1`
   margin-top: ${({ theme: { size } }) => size.px55};
 
@@ -50,8 +46,8 @@ export const Text = styled.p<TStyledTextProps>`
   &:last-of-type {
     margin-top: ${({ theme: { size } }) => size.px20};
   }
-`;
 
-export const Link = styled.a`
-  color: ${({ theme: { color } }) => color.blue};
+  & a {
+    color: ${({ theme: { color } }) => color.blue};
+  }
 `;

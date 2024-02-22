@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 import { WELCOME_PAGE_LINKS } from "@/constants/footerLinks";
 import { BASE_ROUTE } from "@/router/routes";
 
-import { Container, Link, LinkItem, LinkList } from "./styled";
+import { Container, LinkItem, LinkList } from "./styled";
 
 const FooterWelcome = () => {
   return (
@@ -9,7 +11,7 @@ const FooterWelcome = () => {
       <LinkList>
         {WELCOME_PAGE_LINKS.map((linkName) => (
           <LinkItem key={linkName}>
-            <Link href={BASE_ROUTE}>{linkName}</Link>
+            <Link to={BASE_ROUTE}>{linkName}</Link>
           </LinkItem>
         ))}
       </LinkList>

@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 import twitterIcon from "@/assets/images/twitter-bird.png";
 import { SIGNUP_ROUTE } from "@/router/routes";
 import Button from "@/UI/Button";
 import Input from "@/UI/Input";
 
-import { Img, InputContainer, Link, Main, StyledH1 } from "./styled";
+import { Img, InputContainer, Main, StyledH1 } from "./styled";
 
 const LoginContent = () => {
   return (
@@ -17,7 +19,7 @@ const LoginContent = () => {
           Log in
         </Button>
       </InputContainer>
-      <Link href={SIGNUP_ROUTE}>Sign up to Twitter</Link>
+      <Link to={SIGNUP_ROUTE}>Sign up to Twitter</Link>
     </Main>
   );
 };

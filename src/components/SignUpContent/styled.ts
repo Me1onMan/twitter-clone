@@ -32,10 +32,10 @@ export const InputContainer = styled.div<TStyledContainerProps>`
   display: flex;
   flex-direction: column;
   gap: ${({ $gap }) => $gap};
-`;
 
-export const Link = styled.a`
-  color: ${({ theme: { color } }) => color.blue};
+  & a {
+    color: ${({ theme: { color } }) => color.blue};
+  }
 `;
 
 export const H3 = styled.h3`

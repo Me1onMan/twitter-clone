@@ -13,6 +13,10 @@ export const Main = styled.main`
   max-width: ${MAX_WIDTH_MAIN};
 
   margin: ${VERTICAL_MARGIN} auto;
+
+  & a {
+    color: ${({ theme: { color } }) => color.blue};
+  }
 `;
 
 export const Img = styled.img`
@@ -27,10 +31,4 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme: { size } }) => size.px24};
-`;
-
-export const Link = styled.a`
-  align-self: flex-end;
-
-  color: ${({ theme: { color } }) => color.blue};
 `;

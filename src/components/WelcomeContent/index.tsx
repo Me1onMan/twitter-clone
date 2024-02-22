@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 import googleIcon from "@/assets/images/google-icon.png";
 import twitterIcon from "@/assets/images/twitter-bird.png";
 import { BASE_ROUTE, LOGIN_ROUTE, SIGNUP_ROUTE } from "@/router/routes";
 import Button from "@/UI/Button";
 
-import { ButtonsContainer, Container, Img, Link, StyledH1, StyledH2, Text } from "./styled";
+import { ButtonsContainer, Container, Img, StyledH1, StyledH2, Text } from "./styled";
 
 const WelcomeContent = () => {
   const goToSignUp = () => {
@@ -25,11 +27,11 @@ const WelcomeContent = () => {
         </Button>
       </ButtonsContainer>
       <Text $fontSize="14px">
-        By singing up you agree to the <Link href={BASE_ROUTE}>Terms of Service</Link> and{" "}
-        <Link href={BASE_ROUTE}>Privacy Policy</Link>, including <Link href="/">Cookie Use</Link>.
+        By singing up you agree to the <Link to={BASE_ROUTE}>Terms of Service</Link> and{" "}
+        <Link to={BASE_ROUTE}>Privacy Policy</Link>, including <Link to="/">Cookie Use</Link>.
       </Text>
       <Text $fontSize="16px">
-        Already have an account? <Link href={LOGIN_ROUTE}>Log in</Link>
+        Already have an account? <Link to={LOGIN_ROUTE}>Log in</Link>
       </Text>
     </Container>
   );

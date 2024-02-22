@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 import twitterLogo from "@/assets/images/twitter-bird.png";
 import MONTHS from "@/constants/months";
@@ -9,16 +10,7 @@ import Select from "@/UI/Select";
 import getDaysByMonthYear from "@/utils/getDaysByMonth";
 import getYears from "@/utils/getYears";
 
-import {
-  Explanation,
-  H1,
-  H3,
-  Img,
-  InputContainer,
-  Link,
-  Main,
-  SelectDateContainer,
-} from "./styled";
+import { Explanation, H1, H3, Img, InputContainer, Main, SelectDateContainer } from "./styled";
 // import { TDateOfBirth } from "./types";
 
 // const initialDate: TDateOfBirth = {
@@ -49,7 +41,7 @@ const SignUpContent = () => {
         <Input placeholder="Name" />
         <Input placeholder="Phone number" />
         <Input placeholder="Email" />
-        <Link href={WELCOME_ROUTE}>Use email</Link>
+        <Link to={WELCOME_ROUTE}>Use email</Link>
       </InputContainer>
       <InputContainer $gap="32px">
         <H3>Date of birth</H3>

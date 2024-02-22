@@ -15,11 +15,8 @@ export const LinkList = styled.ul`
 
 export const LinkItem = styled.li`
   list-style: none;
-`;
 
-export const Link = styled.a`
-  text-decoration: none;
-
-  font-size: ${({ theme: { font } }) => font.fontSize.xs};
-  color: ${({ theme: { color } }) => color.black};
+  & a {
+    color: ${({ theme: { color } }) => color.black};
+  }
 `;
