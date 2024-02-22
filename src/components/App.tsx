@@ -1,39 +1,18 @@
-// import styled from "styled-components";
+import { Provider } from "react-redux";
+import { RouterProvider } from "react-router-dom";
 
-// import MONTHS from "@/constants/months";
-// import Login from "@/pages/Login";
-import SignUp from "@/pages/SignUpPage";
-// import Welcome from "@/pages/Welcome";
 import ThemeProvider from "@/providers/ThemeProvider";
-// import Button from "@/UI/Button";
-// import Input from "@/UI/Input";
-// import Search from "@/UI/Search";
-// import Select from "@/UI/Select";
-// import ThemeToggler from "@/UI/ThemeToggler";
 
-// const Container = styled.div`
-//   width: 750px;
-//   margin: 0 auto;
-
-//   display: flex;
-//   flex-direction: column;
-//   gap: 16px;
-// `;
+import router from "../router";
+import store from "../store";
 
 const App = () => {
   return (
-    <ThemeProvider>
-      {/* <ThemeToggler /> */}
-      {/* <Container>
-        <Button variant="secondary">Tweet</Button>
-        <Input placeholder="Test placeholder" />
-        <Search />
-        <Select placeholder="Month" options={MONTHS} />
-      </Container> */}
-      {/* <Welcome /> */}
-      {/* <Login /> */}
-      <SignUp />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </Provider>
   );
 };
 

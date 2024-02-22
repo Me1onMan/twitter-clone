@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 import twitterIcon from "@/assets/images/twitter-bird.png";
@@ -8,13 +9,16 @@ import Input from "@/UI/Input";
 import { Img, InputContainer, Main, StyledH1 } from "./styled";
 
 const LoginContent = () => {
+  const phoneOrEmailRef = useRef(null);
+  const passwordRef = useRef(null);
+
   return (
     <Main>
       <Img src={twitterIcon} alt="Bird" title="Twitter" />
       <StyledH1>Log in to Twitter</StyledH1>
       <InputContainer>
-        <Input placeholder="Phone number, email address" />
-        <Input placeholder="Password" />
+        <Input ref={phoneOrEmailRef} placeholder="Phone number, email address" />
+        <Input ref={passwordRef} placeholder="Password" />
         <Button variant="primary" onClick={() => undefined}>
           Log in
         </Button>

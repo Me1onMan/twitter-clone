@@ -1,7 +1,10 @@
+import { Dispatch, SetStateAction } from "react";
+
 export type TSelectProps = {
-  // onChange: (_: number) => void;
-  placeholder?: string;
+  selectedValue: string;
+  setSelectedValue: Dispatch<SetStateAction<string>>;
   options?: string[] | number[];
+  placeholder?: string;
   width?: string;
 };
 

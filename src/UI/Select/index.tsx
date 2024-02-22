@@ -1,43 +1,33 @@
-import { forwardRef } from "react";
+import { ChangeEvent, FC } from "react";
 
-// import arrow from "@/assets/icons/select-arrow.svg";
 import { Option, StyledSelect, StyledSelectContainer } from "./styled";
 import { TSelectProps } from "./types";
 
-const Select = forwardRef<HTMLSelectElement, TSelectProps>(
-  ({ options = [], placeholder = "", width = "100%" }, ref) => {
-    //   const [isListOpen, setIsListOpen] = useState(false);
+const Select: FC<TSelectProps> = ({
+  selectedValue,
+  setSelectedValue,
+  options = [],
+  placeholder = "",
+  width = "100%",
+}) => {
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedValue(e.target.value);
+  };
 
-    //   const openList = () => {
-    //     setIsListOpen(true);
-    //   };
-
-    //   const closeList = () => {
-    //     setIsListOpen(false);
-    //   };
-
-    //   const toggleIsOpen = () => {
-    //     setIsListOpen((prev) => !prev);
-    //   };
-
-    return (
-      <StyledSelectContainer $width={width}>
-        <StyledSelect ref={ref}>
-          <Option value="" disabled selected>
-            {placeholder}
+  return (
+    <StyledSelectContainer $width={width}>
+      <StyledSelect value={selectedValue} onChange={handleChange}>
+        <Option value="" disabled>
+          {placeholder}
+        </Option>
+        {options.map((option) => (
+          <Option value={option} key={option}>
+            {option}
           </Option>
-          {options.map((month) => (
-            <Option value={month} key={month}>
-              {month}
-            </Option>
-          ))}
-        </StyledSelect>
-        {/* <Arrow src={arrow} /> */}
-      </StyledSelectContainer>
-    );
-  },
-);
-
-Select.displayName = "Select";
+        ))}
+      </StyledSelect>
+    </StyledSelectContainer>
+  );
+};
 
 export default Select;

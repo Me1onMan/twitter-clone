@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import twitterLogo from "@/assets/images/twitter-bird.png";
@@ -11,36 +11,26 @@ import getDaysByMonthYear from "@/utils/getDaysByMonth";
 import getYears from "@/utils/getYears";
 
 import { Explanation, H1, H3, Img, InputContainer, Main, SelectDateContainer } from "./styled";
-// import { TDateOfBirth } from "./types";
-
-// const initialDate: TDateOfBirth = {
-//   year: undefined,
-//   month: undefined,
-//   day: undefined,
-// };
 
 const SignUpContent = () => {
-  const yearRef = useRef(null);
-  const monthRef = useRef(null);
-  const dayRef = useRef(null);
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const phoneRef = useRef(null);
 
-  //   const [dateOfBirth, setDateOfBirth] = useState<TDateOfBirth>(initialDate);
+  const [year, setYear] = useState<string>("");
+  const [month, setMonth] = useState<string>("");
+  const [day, setDay] = useState<string>("");
 
-  //   const changeYear = (newYear: number) => {
-  //     setDateOfBirth((prevDate) => ({
-  //       ...prevDate,
-  //       newYear,
-  //     }));
-  //   };
+  const handleLog = () => {};
 
   return (
     <Main>
       <Img src={twitterLogo} alt="Bird" title="twitter" />
       <H1>Create an account</H1>
       <InputContainer $gap="26px">
-        <Input placeholder="Name" />
-        <Input placeholder="Phone number" />
-        <Input placeholder="Email" />
+        <Input ref={nameRef} placeholder="Name" />
+        <Input ref={phoneRef} placeholder="Phone number" />
+        <Input ref={emailRef} placeholder="Email" />
         <Link to={WELCOME_ROUTE}>Use email</Link>
       </InputContainer>
       <InputContainer $gap="32px">
@@ -52,16 +42,27 @@ const SignUpContent = () => {
           Elit congue.
         </Explanation>
         <SelectDateContainer>
-          <Select ref={yearRef} placeholder="Year" options={getYears()} />
-          <Select ref={monthRef} placeholder="Month" options={MONTHS} />
           <Select
-            ref={dayRef}
+            selectedValue={year}
+            setSelectedValue={setYear}
+            placeholder="Year"
+            options={getYears()}
+          />
+          <Select
+            selectedValue={month}
+            setSelectedValue={setMonth}
+            placeholder="Month"
+            options={MONTHS}
+          />
+          <Select
+            selectedValue={day}
+            setSelectedValue={setDay}
             placeholder="Day"
-            options={getDaysByMonthYear(monthRef.current, yearRef.current)}
+            options={getDaysByMonthYear(month, +year)}
           />
         </SelectDateContainer>
       </InputContainer>
-      <Button onClick={() => undefined} variant="primary">
+      <Button onClick={handleLog} variant="primary">
         Next
       </Button>
     </Main>
