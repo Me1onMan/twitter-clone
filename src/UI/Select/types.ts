@@ -1,6 +1,7 @@
 export type TSelectProps = {
+  // onChange: (_: number) => void;
   placeholder?: string;
-  options?: string[];
+  options?: string[] | number[];
   width?: string;
 };
 

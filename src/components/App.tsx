@@ -1,7 +1,8 @@
 // import styled from "styled-components";
 
 // import MONTHS from "@/constants/months";
-import Login from "@/pages/Login";
+// import Login from "@/pages/Login";
+import SignUp from "@/pages/SignUp";
 // import Welcome from "@/pages/Welcome";
 import ThemeProvider from "@/providers/ThemeProvider";
 // import Button from "@/UI/Button";
@@ -30,7 +31,8 @@ const App = () => {
         <Select placeholder="Month" options={MONTHS} />
       </Container> */}
       {/* <Welcome /> */}
-      <Login />
+      {/* <Login /> */}
+      <SignUp />
     </ThemeProvider>
   );
 };
