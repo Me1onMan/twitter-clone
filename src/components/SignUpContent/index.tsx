@@ -2,6 +2,7 @@ import { useRef } from "react";
 
 import twitterLogo from "@/assets/images/twitter-bird.png";
 import MONTHS from "@/constants/months";
+import { WELCOME_ROUTE } from "@/router/routes";
 import Button from "@/UI/Button";
 import Input from "@/UI/Input";
 import Select from "@/UI/Select";
@@ -48,7 +49,7 @@ const SignUpContent = () => {
         <Input placeholder="Name" />
         <Input placeholder="Phone number" />
         <Input placeholder="Email" />
-        <Link href="/">Use email</Link>
+        <Link href={WELCOME_ROUTE}>Use email</Link>
       </InputContainer>
       <InputContainer $gap="32px">
         <H3>Date of birth</H3>
@@ -68,7 +69,9 @@ const SignUpContent = () => {
           />
         </SelectDateContainer>
       </InputContainer>
-      <Button variant="primary">Next</Button>
+      <Button onClick={() => undefined} variant="primary">
+        Next
+      </Button>
     </Main>
   );
 };

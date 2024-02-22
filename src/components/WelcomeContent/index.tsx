@@ -1,28 +1,35 @@
 import googleIcon from "@/assets/images/google-icon.png";
 import twitterIcon from "@/assets/images/twitter-bird.png";
+import { BASE_ROUTE, LOGIN_ROUTE, SIGNUP_ROUTE } from "@/router/routes";
 import Button from "@/UI/Button";
 
 import { ButtonsContainer, Container, Img, Link, StyledH1, StyledH2, Text } from "./styled";
 
 const WelcomeContent = () => {
+  const goToSignUp = () => {
+    window.location.href = SIGNUP_ROUTE;
+  };
+
   return (
     <Container>
       <Img src={twitterIcon} $color="blue" alt="Bird" />
       <StyledH1>Happening now</StyledH1>
       <StyledH2>Join Twitter today</StyledH2>
       <ButtonsContainer>
-        <Button variant="outlined">
+        <Button onClick={goToSignUp} variant="outlined">
           <Img src={googleIcon} alt="Colored letter G" />
           Sign up with Google
         </Button>
-        <Button variant="outlined">Sign up with email</Button>
+        <Button onClick={goToSignUp} variant="outlined">
+          Sign up with email
+        </Button>
       </ButtonsContainer>
       <Text $fontSize="14px">
-        By singing up you agree to the <Link href="/">Terms of Service</Link> and{" "}
-        <Link href="/">Privacy Policy</Link>, including <Link href="/">Cookie Use</Link>.
+        By singing up you agree to the <Link href={BASE_ROUTE}>Terms of Service</Link> and{" "}
+        <Link href={BASE_ROUTE}>Privacy Policy</Link>, including <Link href="/">Cookie Use</Link>.
       </Text>
       <Text $fontSize="16px">
-        Already have an account? <Link href="/">Log in</Link>
+        Already have an account? <Link href={LOGIN_ROUTE}>Log in</Link>
       </Text>
     </Container>
   );

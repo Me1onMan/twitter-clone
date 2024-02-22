@@ -1,4 +1,5 @@
 import twitterIcon from "@/assets/images/twitter-bird.png";
+import { SIGNUP_ROUTE } from "@/router/routes";
 import Button from "@/UI/Button";
 import Input from "@/UI/Input";
 
@@ -12,9 +13,11 @@ const LoginContent = () => {
       <InputContainer>
         <Input placeholder="Phone number, email address" />
         <Input placeholder="Password" />
-        <Button variant="primary">Log in</Button>
+        <Button variant="primary" onClick={() => undefined}>
+          Log in
+        </Button>
       </InputContainer>
-      <Link href="/">Sign up to Twitter</Link>
+      <Link href={SIGNUP_ROUTE}>Sign up to Twitter</Link>
     </Main>
   );
 };

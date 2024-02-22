@@ -2,7 +2,7 @@
 
 // import MONTHS from "@/constants/months";
 // import Login from "@/pages/Login";
-import SignUp from "@/pages/SignUp";
+import SignUp from "@/pages/SignUpPage";
 // import Welcome from "@/pages/Welcome";
 import ThemeProvider from "@/providers/ThemeProvider";
 // import Button from "@/UI/Button";

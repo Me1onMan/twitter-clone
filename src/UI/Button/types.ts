@@ -5,6 +5,7 @@ export type TButtonVariants = "primary" | "secondary" | "outlined" | "follow" | 
 export type TProps = {
   children: ReactNode;
   variant: TButtonVariants;
+  onClick: () => void;
 };
 
 export type TStyledProps = {

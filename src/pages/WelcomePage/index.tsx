@@ -1,27 +1,19 @@
-import styled from "styled-components";
-
 import graffity from "@/assets/images/twitter-graffity.png";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import FooterWelcome from "@/components/FooterWelcome";
 import WelcomeContent from "@/components/WelcomeContent";
 
-const StyledImg = styled.img`
-  width: 58%;
-`;
-
-const Main = styled.main`
-  display: flex;
-  flex-direction: row;
-`;
+import { Main, StyledImg } from "./styled";
 
 const Welcome = () => {
   return (
-    <>
+    <ErrorBoundary>
       <Main>
         <StyledImg src={graffity} alt="White bird in front of graffity-wall" title="twitter" />
         <WelcomeContent />
       </Main>
       <FooterWelcome />
-    </>
+    </ErrorBoundary>
   );
 };
 
