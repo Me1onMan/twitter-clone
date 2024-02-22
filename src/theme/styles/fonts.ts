@@ -24,6 +24,7 @@ const FONTS: TFonts = {
     l: 700,
     m: 500,
     s: 400,
+    xs: 300,
   },
 };
 
