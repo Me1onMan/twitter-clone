@@ -3,6 +3,8 @@ import { RouterProvider } from "react-router-dom";
 
 import ThemeProvider from "@/providers/ThemeProvider";
 
+import "../firebase";
+
 import router from "../router";
 import store from "../store";
 

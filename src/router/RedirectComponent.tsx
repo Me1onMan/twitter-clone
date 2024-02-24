@@ -8,7 +8,7 @@ const RedirectComponent = () => {
     navigate("/welcome");
   }, [navigate]);
 
-  return null; // или что-то другое, что не будет рендериться
+  return null;
 };
 
 export default RedirectComponent;
