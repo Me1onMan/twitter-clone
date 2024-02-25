@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-import { getBgColor } from "./getStyles";
+import { getBgColor, getTextColor } from "./getStyles";
 import { TStyledProps } from "./types";
 
 const StyledButton = styled.button<TStyledProps>`
-  cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,6 +16,10 @@ const StyledButton = styled.button<TStyledProps>`
   border: ${({ $variant, theme }) =>
     $variant === "outlined" ? `1px solid ${theme.color.gray}` : "none"};
   border-radius: ${({ theme }) => theme.size.px50};
+
+  font-size: ${({ theme: { font } }) => font.fontSize.l};
+  font-weight: ${({ theme: { font } }) => font.fontWeight.bold};
+  color: ${({ $variant }) => getTextColor($variant)};
 `;
 
 export default StyledButton;

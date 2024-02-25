@@ -20,11 +20,11 @@ const FONTS: TFonts = {
     xs: "13px",
   },
   fontWeight: {
-    xl: 900,
-    l: 700,
-    m: 500,
-    s: 400,
-    xs: 300,
+    black: 900,
+    bold: 700,
+    medium: 500,
+    regular: 400,
+    light: 300,
   },
 };
 

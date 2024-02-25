@@ -44,7 +44,7 @@ export const H3 = styled.h3`
 
 export const Explanation = styled.p`
   font-size: ${({ theme: { font } }) => font.fontSize.m};
-  font-weight: ${({ theme: { font } }) => font.fontWeight.xs};
+  font-weight: ${({ theme: { font } }) => font.fontWeight.light};
   color: ${({ theme: { color } }) => color.gray3};
 `;
 
