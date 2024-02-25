@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 
 import ErrorPage from "@/pages/ErrorPage";
 import Login from "@/pages/LoginPage";
+import ProfilePage from "@/pages/ProfilePage";
 import SignUp from "@/pages/SignUpPage";
 import Welcome from "@/pages/WelcomePage";
 
 import RedirectComponent from "./RedirectComponent";
-import { BASE_ROUTE, LOGIN_ROUTE, SIGNUP_ROUTE, WELCOME_ROUTE } from "./routes";
+import { BASE_ROUTE, LOGIN_ROUTE, PROFILE_ROUTE, SIGNUP_ROUTE, WELCOME_ROUTE } from "./routes";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: LOGIN_ROUTE,
     element: <Login />,
+  },
+  {
+    path: PROFILE_ROUTE,
+    element: <ProfilePage />,
   },
 ]);
 
