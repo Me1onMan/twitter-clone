@@ -5,6 +5,7 @@ type TSizes = {
 const SIZES: TSizes = {
   px4: "4px",
   px6: "6px",
+  px8: "8px",
   px16: "16px",
   px20: "20px",
   px24: "24px",
