@@ -28,7 +28,9 @@ const ProfileSection = () => {
         <ProfileName $fontSize="20px">{profileMocked.name}</ProfileName>
         <AdditionalText $fontSize="16px">{profileMocked.postsCount} posts</AdditionalText>
       </Header>
+
       <BackgroundImg src={bgImg} />
+
       <ProfileContainer>
         <AboutContainer>
           <Avatar src={avatarImg} />

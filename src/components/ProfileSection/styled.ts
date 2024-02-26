@@ -4,7 +4,9 @@ import { TTextParams } from "./types";
 
 const ABOUT_CONTAINER_MARGIN_TOP = "-55px";
 
-export const Header = styled.header``;
+export const Header = styled.header`
+  padding: ${({ theme: { size } }) => `${size.px16} ${size.px20}`};
+`;
 
 export const ProfileName = styled.h2<TTextParams>``;
 
