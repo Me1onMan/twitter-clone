@@ -11,7 +11,11 @@ const StyledButton = styled.button<TStyledProps>`
   width: ${({ theme }) => theme.size.perc100};
   height: ${({ theme }) => theme.size.px60};
 
-  background-color: ${({ $variant }) => getBgColor($variant)};
+  background-color: ${({ $variant }) => {
+    // console.log("disabled:", disabled);
+
+    return getBgColor($variant);
+  }};
 
   border: ${({ $variant, theme }) =>
     $variant === "outlined" ? `1px solid ${theme.color.gray}` : "none"};
@@ -20,6 +24,11 @@ const StyledButton = styled.button<TStyledProps>`
   font-size: ${({ theme: { font } }) => font.fontSize.l};
   font-weight: ${({ theme: { font } }) => font.fontWeight.bold};
   color: ${({ $variant }) => getTextColor($variant)};
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: ${({ theme: { color } }) => color.lightBlue};
+  }
 `;
 
 export default StyledButton;

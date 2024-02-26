@@ -12,7 +12,7 @@ const TimeAgo: FC<TProps> = ({ timestamp }) => {
     timeAgo = `${timePeriod} ago`;
   }
 
-  return <Time>{timeAgo}</Time>;
+  return <Time>· {timeAgo}</Time>;
 };
 
 export default TimeAgo;

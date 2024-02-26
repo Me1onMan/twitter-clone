@@ -6,6 +6,8 @@ export type TProps = {
   children: ReactNode;
   variant: TButtonVariants;
   onClick: () => void;
+  disabled?: boolean;
+  type?: "button" | "submit";
 };
 
 export type TStyledProps = {

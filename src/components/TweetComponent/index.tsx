@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 import heart from "@/assets/icons/heart.svg";
 import moreIcon from "@/assets/icons/more-post.svg";
 import avatar from "@/assets/images/avatar_small.png";
@@ -15,28 +17,25 @@ import {
   PostText,
 } from "./styled";
 import TimeAgo from "./TimeAgo";
+import { TProps } from "./types";
 
-const TweetComponent = () => {
+const TweetComponent: FC<TProps> = ({ id, author, login, text, createdAt, likedById }) => {
   return (
     <Container>
       <Avatar src={avatar} alt="Profile avatar" title="Fyodor" />
       <Content>
         <InfoContainer>
-          <Author>Fyodor</Author>
-          <Email>@fshklyar</Email>
-          <TimeAgo timestamp="2020-05-30" />
+          <Author>{`${id} ${author}`}</Author>
+          <Email>{login}</Email>
+          <TimeAgo timestamp={createdAt} />
           <Button>
             <img src={moreIcon} alt="Three dots" title="More" />
           </Button>
         </InfoContainer>
-        <PostText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione facilis est
-          vitae, animi enim odio officiis, ut aut dolorem nostrum sint? Veniam sapiente esse iure
-          enim expedita, sed totam?
-        </PostText>
+        <PostText>{text}</PostText>
         <Button>
           <HeartImg src={heart} alt="Heart" title="Like" />
-          <LikesCount>5</LikesCount>
+          <LikesCount>{likedById.length}</LikesCount>
         </Button>
       </Content>
     </Container>

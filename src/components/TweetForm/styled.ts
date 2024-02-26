@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const LoaderContainer = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 90%;
@@ -35,6 +44,10 @@ export const ButtonContainer = styled.div`
 
 export const Label = styled.label`
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: ${({ theme: { size } }) => size.px8};
 `;
 
 export const UploadImg = styled.input`

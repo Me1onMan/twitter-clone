@@ -57,4 +57,12 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ["./src/utils/compressImage.ts"],
+      rules: {
+        "no-new": "off",
+      },
+    },
+  ],
 };
